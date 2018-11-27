@@ -5,16 +5,20 @@ Este WebServer tem o intuído de gerar  uma **API RestFul** para o site www.prop
 # Documentação
 ### Formato de requisições
 Para listar todas as denuncias:
-> http://13.82.130.246:9005/api/denuncia/denunciadosTodos
+
+> [GET] http://13.82.130.246:9005/api/denuncia/
 
 Para listar todas as denuncias por órgão:
-> http://13.82.130.246:9005/api/denuncia/buscarPorOrgao?nome=Nome_do_orgao
+> [GET] http://13.82.130.246:9005/api/denuncia/?nome=Nome_do_orgao
+
+Inserir nova denuncia p:
+> [GET] http://13.82.130.246:9005/api/denuncia/?nome=Nome_do_orgao
 
 Para remover uma denuncia:
-> http://13.82.130.246:9005/api/denuncia/remover
+> [DELETE] http://13.82.130.246:9005/api/denuncia/
 
 ```json
-	{
-		 "codDenuncia" = "codigo_da_denuncia"
-	}
+{
+	"codDenuncia" : "codigo_da_denuncia"
+}
 ```
