@@ -16,7 +16,9 @@ public class Orgao {
 	private String nome;
 	@Column(nullable = false)
 	private String sigla;
-	
+	public Orgao() {
+		// TODO Auto-generated constructor stub
+	}
 	public Orgao(Long codOrgao, String nome, String sigla) {
 		this.codOrgao = codOrgao;
 		this.nome = nome;

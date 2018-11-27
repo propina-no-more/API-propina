@@ -14,7 +14,6 @@ public class Edital {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY )
 	private Long codEdital;
-	@Column(nullable= false)
 	private String ganhador;
 	@Column(nullable= false)
 	private String objetoLicitado;
@@ -26,7 +25,9 @@ public class Edital {
 	@JoinColumn(name="codOrgao")
 	private Orgao orgao_id;
 	
-	
+	public Edital() {
+		// TODO Auto-generated constructor stub
+	}
 	public Edital(Long codEdital, String ganhador, String objetoLicitado, String referencia, String status,
 			Orgao orgao_id) {
 		this.codEdital = codEdital;
