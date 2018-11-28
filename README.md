@@ -1,6 +1,6 @@
 # Bem-vindo ao WebServer Propina no more!
 
-Este WebServer tem o intuído de gerar  uma **API RestFul** para o site www.proprinanomore.com.br.
+Este web services tem o intuído de gerar  uma **API RestFul** para o site www.proprinanomore.com.br.
 
 # Documentação
 ### Formato de requisições
