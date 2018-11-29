@@ -18,7 +18,7 @@ Desenvolver uma API Restful para realizar denuncia e consulta utilizando Spring 
 git clone https://github.com/propina-no-more/API-propina.git
 ```
 
-**2. Criar banco de dados Mysql **
+**2. Criar banco de dados Mysql**
 ```bash
 create database propinanomore
 ```
