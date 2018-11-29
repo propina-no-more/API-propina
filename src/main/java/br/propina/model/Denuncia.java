@@ -1,24 +1,17 @@
-package br.propinanomore.models;
+package br.propina.model;
 
 import java.io.Serializable;
-import java.util.Collection;
-
+import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.EntityListeners;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
-import javax.validation.constraints.NotBlank;
-
-import org.springframework.data.jpa.domain.support.AuditingEntityListener;
-
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 public class Denuncia implements Serializable{
@@ -30,43 +23,37 @@ public class Denuncia implements Serializable{
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long codDenuncia;
-	@NotBlank
-//	@Column(nullable= false)
+	@Column(nullable= false)
 	private int ano;
-	@NotBlank
 	private String cpf;
 	private String nome;
-	@NotBlank
-//	@Column(nullable= false)
+	@Column(nullable= false)
 	private String onde;
-	@NotBlank
-//	@Column(nullable= false)
+	@Column(nullable= false)
 	private String oque;
-	@NotBlank
-//	@Column(nullable= false)
+	@Column(nullable= false)
 	private String quando;
-	@NotBlank
-//	@Column(nullable= false)
+	@Column(nullable= false)
 	private char sigilo;
 	private String telefone;
-	@NotBlank
-	@ManyToOne
+	
+	@ManyToOne(cascade=CascadeType.MERGE)
 	private Edital edital;
-	@NotBlank
-	@ManyToOne
+	
+	@ManyToOne(cascade = CascadeType.MERGE)
 	private Orgao orgao;
 	
-	@OneToOne(cascade=CascadeType.PERSIST)
+	@ManyToMany(cascade=CascadeType.PERSIST)
 	@JoinTable(name = "denuncia_prova",
 				joinColumns = @JoinColumn(name="den_codDenuncia"),
 				inverseJoinColumns = @JoinColumn(name="den_codProva"))
-	private Collection<Prova> provas;
+	private List<Prova> provas;
 	
-	@OneToOne(cascade=CascadeType.PERSIST)
+	@ManyToMany(cascade=CascadeType.PERSIST)
 	@JoinTable(name = "denuncia_denunciado",
 				joinColumns = @JoinColumn(name="den_codDenuncia"),
 				inverseJoinColumns = @JoinColumn(name="den_codDenunciado"))
-	private Collection<Denunciado> denunciado;
+	private List<Denunciado> denunciado;
 	
 	public Denuncia() {
 	}
@@ -86,11 +73,11 @@ public class Denuncia implements Serializable{
 		this.orgao = orgao;
 	}
 	
-	public Collection<Prova> getProvas() {
+	public List<Prova> getProvas() {
 		return provas;
 	}
 
-	public void setProvas(Collection<Prova> provas) {
+	public void setProvas(List<Prova> provas) {
 		this.provas = provas;
 	}
 

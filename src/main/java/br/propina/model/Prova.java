@@ -1,17 +1,12 @@
-package br.propinanomore.models;
+package br.propina.model;
 
 import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.EntityListeners;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
-import org.springframework.data.jpa.domain.support.AuditingEntityListener;
-
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 public class Prova implements Serializable{
@@ -23,9 +18,9 @@ public class Prova implements Serializable{
 	@Id
 	@GeneratedValue(strategy= GenerationType.IDENTITY)
 	private long codProva;
-//	@Column(nullable= false)
+	@Column(nullable= false)
 	private String caminhaArquivo;
-//	@Column(nullable= false)
+	@Column(nullable= false)
 	private String tipoProva;
 	
 	public Prova() {
