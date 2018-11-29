@@ -14,23 +14,23 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.propinanomore.models.Denuncia;
-import br.propinanomore.repository.DenunciaRepository;
+//import br.propinanomore.repository.DenunciaRepository;
 
 @RestController
-@RequestMapping("/api/denuncia/")
+@RequestMapping("/api/denuncia")
 public class DenunciaController {
 
-	@Autowired
+/*	@Autowired
 	private DenunciaRepository dr;
 
 	// pesquisa
-	@GetMapping(produces = "application/json")
-	public @ResponseBody Iterable<Denuncia> todasDenuncias() {
+	@GetMapping()
+	public List<Denuncia> todasDenuncias() {
 		return dr.findAll();
 	}
 
-	@GetMapping(produces = "application/json")
-	public @ResponseBody Iterable<Denuncia> listarPorOrgao(@Valid String nome) {
+	@GetMapping()
+	public List<Denuncia> listarPorOrgao(@Valid String nome) {
 		List<Denuncia> lista = dr.findNome(nome);
 		if (lista.size() != 0) {
 			return lista;
@@ -67,4 +67,5 @@ public class DenunciaController {
 		}
 	}
 	// fim do remover
+*/
 }

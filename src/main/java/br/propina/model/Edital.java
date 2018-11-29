@@ -1,19 +1,17 @@
-package br.propinanomore.models;
+package br.propina.model;
 
 import java.io.Serializable;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.EntityListeners;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 
-import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 public class Edital implements Serializable{
@@ -26,13 +24,13 @@ public class Edital implements Serializable{
 	@GeneratedValue(strategy=GenerationType.IDENTITY )
 	private Long codEdital;
 	private String ganhador;
-//	@Column(nullable= false)
+	@Column(nullable= false)
 	private String objetoLicitado;
-//	@Column(nullable= false)
+	@Column(nullable= false)
 	private String referencia;
-//	@Column(nullable= false)
+	@Column(nullable= false)
 	private String status;
-	@OneToOne
+	@OneToOne(cascade=CascadeType.MERGE)
 	@JoinColumn(name="codOrgao")
 	private Orgao orgao_id;
 	

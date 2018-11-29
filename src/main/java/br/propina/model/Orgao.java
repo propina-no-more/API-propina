@@ -1,17 +1,12 @@
-package br.propinanomore.models;
+package br.propina.model;
 
 import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.EntityListeners;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
-import org.springframework.data.jpa.domain.support.AuditingEntityListener;
-
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 public class Orgao implements Serializable{
@@ -23,9 +18,9 @@ public class Orgao implements Serializable{
 	@Id
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
 	private Long codOrgao;
-//	@Column(nullable = false)
+	@Column(nullable = false)
 	private String nome;
-//	@Column(nullable = false)
+	@Column(nullable = false)
 	private String sigla;
 	
 	public Orgao() {
