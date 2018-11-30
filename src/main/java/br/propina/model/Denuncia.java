@@ -12,6 +12,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.Transient;
 
 @Entity
 public class Denuncia implements Serializable{
@@ -37,13 +38,14 @@ public class Denuncia implements Serializable{
 	private char sigilo;
 	private String telefone;
 	
-	@ManyToOne(cascade=CascadeType.MERGE)
+	
+	@ManyToOne()
 	private Edital edital;
 	
-	@ManyToOne(cascade = CascadeType.MERGE)
+	@ManyToOne()
 	private Orgao orgao;
 	
-	@ManyToMany(cascade=CascadeType.MERGE)
+	@ManyToMany()
 	@JoinTable(name = "denuncia_prova",
 				joinColumns = @JoinColumn(name="den_codDenuncia"),
 				inverseJoinColumns = @JoinColumn(name="den_codProva"))

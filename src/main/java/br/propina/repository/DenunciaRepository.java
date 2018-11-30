@@ -5,6 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 import br.propina.model.Denuncia;
+import br.propina.model.DenunciaDTO;
 
 @Repository
 public interface DenunciaRepository extends JpaRepository<Denuncia, String> {
@@ -15,7 +16,7 @@ public interface DenunciaRepository extends JpaRepository<Denuncia, String> {
 			+ "INNER JOIN Orgao r ON r.codOrgao = d.orgao "
 			+ "WHERE o.nome LIKE %?1% OR r.nome LIKE %?1%")
 	List<Denuncia> findnome(String nome);
-
+	
 	@Query ("SELECT d FROM Denuncia d WHERE d.codDenuncia = ?1")
 	Denuncia findcodDenuncia(long codDenuncia);
 

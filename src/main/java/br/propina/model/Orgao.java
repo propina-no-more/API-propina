@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Transient;
 
 @Entity
 public class Orgao implements Serializable{
@@ -18,10 +19,13 @@ public class Orgao implements Serializable{
 	@Id
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
 	private Long codOrgao;
-	@Column(nullable = false)
+	@Column(nullable = false, unique=true)
 	private String nome;
-	@Column(nullable = false)
+	@Column(nullable = false, unique=true)
 	private String sigla;
+	@Transient
+	private int quantidade;
+	
 	
 	public Orgao() {
 		// TODO Auto-generated constructor stub
@@ -30,6 +34,14 @@ public class Orgao implements Serializable{
 		this.codOrgao = codOrgao;
 		this.nome = nome;
 		this.sigla = sigla;
+	}
+	
+	
+	public int getQuantidade() {
+		return quantidade;
+	}
+	public void setQuantidade(int quantidade) {
+		this.quantidade = quantidade;
 	}
 	public Long getCodOrgao() {
 		return codOrgao;

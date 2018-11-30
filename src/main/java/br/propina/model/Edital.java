@@ -30,7 +30,7 @@ public class Edital implements Serializable{
 	private String referencia;
 	@Column(nullable= false)
 	private String status;
-	@OneToOne(cascade=CascadeType.MERGE)
+	@OneToOne()
 	@JoinColumn(name="codOrgao")
 	private Orgao orgao_id;
 	

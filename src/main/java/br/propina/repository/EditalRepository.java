@@ -8,4 +8,6 @@ import br.propina.model.Edital;
 @Repository
 public interface EditalRepository extends JpaRepository<Edital, String>{
 
+	Edital findByreferencia(String referencia);
+
 }
