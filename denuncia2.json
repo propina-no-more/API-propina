@@ -1,0 +1,103 @@
+{
+    "denuncia":[
+    {
+        "codDenuncia": 1,
+        "ano": 2018,
+        "cpf": null,
+        "nome": null,
+        "onde": "Tribunal merge ",
+        "oque": "aguaagjfgdjkhjhgfhgsdhsaljhdksja",
+        "quando": "28/11/2018",
+        "sigilo": "N",
+        "telefone": "92 3615-5757",
+        "edital": null,
+        "orgao": {
+            "codOrgao": 1,
+            "nome": "SECRETARIA testeL",
+            "sigla": "teste",
+            "quantidade": 0
+        },
+        "provas": []
+    },
+    {
+        "codDenuncia": 2,
+        "ano": 2018,
+        "cpf": null,
+        "nome": null,
+        "onde": "Tribunal merge ",
+        "oque": "aguaagjfgdjkhjhgfhgsdhsaljhdksja",
+        "quando": "28/11/2018",
+        "sigilo": "N",
+        "telefone": "92 3615-5757",
+        "edital": null,
+        "orgao": {
+            "codOrgao": 1,
+            "nome": "SECRETARIA testeL",
+            "sigla": "teste",
+            "quantidade": 0
+        },
+        "provas": []
+    },
+    {
+        "codDenuncia": 3,
+        "ano": 2018,
+        "cpf": null,
+        "nome": null,
+        "onde": "Tribunal merge ",
+        "oque": "aguaagjfgdjkhjhgfhgsdhsaljhdksja",
+        "quando": "28/11/2018",
+        "sigilo": "N",
+        "telefone": "92 3615-5757",
+        "edital": {
+            "codEdital": 1,
+            "ganhador": "INDUSTRIA DE CAFÉ MANAUS LTDA",
+            "objetoLicitado": "AQ. MAT. DE CONSUMO PARA COPA - AADES",
+            "referencia": "CEL 006/18",
+            "status": "Homologado Total",
+            "orgao_id": {
+                "codOrgao": 1,
+                "nome": "SECRETARIA testeL",
+                "sigla": "teste",
+                "quantidade": 0
+            }
+        },
+        "orgao": {
+            "codOrgao": 1,
+            "nome": "SECRETARIA testeL",
+            "sigla": "teste",
+            "quantidade": 0
+        },
+        "provas": []
+    },
+    {
+        "codDenuncia": 4,
+        "ano": 2018,
+        "cpf": null,
+        "nome": null,
+        "onde": "Tribunal merge ",
+        "oque": "aguaagjfgdjkhjhgfhgsdhsaljhdksja",
+        "quando": "28/11/2018",
+        "sigilo": "N",
+        "telefone": "92 3615-5757",
+        "edital": {
+            "codEdital": 1,
+            "ganhador": "INDUSTRIA DE CAFÉ MANAUS LTDA",
+            "objetoLicitado": "AQ. MAT. DE CONSUMO PARA COPA - AADES",
+            "referencia": "CEL 006/18",
+            "status": "Homologado Total",
+            "orgao_id": {
+                "codOrgao": 1,
+                "nome": "SECRETARIA testeL",
+                "sigla": "teste",
+                "quantidade": 0
+            }
+        },
+        "orgao": {
+            "codOrgao": 1,
+            "nome": "SECRETARIA testeL",
+            "sigla": "teste",
+            "quantidade": 0
+        },
+        "provas": []
+    }]
+}
