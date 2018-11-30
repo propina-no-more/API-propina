@@ -43,7 +43,7 @@ public class Denuncia implements Serializable{
 	@ManyToOne(cascade = CascadeType.MERGE)
 	private Orgao orgao;
 	
-	@ManyToMany(cascade=CascadeType.PERSIST)
+	@ManyToMany(cascade=CascadeType.MERGE)
 	@JoinTable(name = "denuncia_prova",
 				joinColumns = @JoinColumn(name="den_codDenuncia"),
 				inverseJoinColumns = @JoinColumn(name="den_codProva"))

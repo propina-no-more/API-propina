@@ -44,10 +44,23 @@ O aplicativo começará a ser executado em <http://localhost:9000>.
 O aplicativo define as seguintes APIs de CRUD.
 
 	GET /api/v1/denuncia
+	
+	GET /api/v1/denuncia/arquivo/
+	
+	GET /api/v1/denuncia/arquivo/{codProva}
     
-    GET /api/v1/denuncia/{nomeOrgao}
+	GET /api/v1/denuncia/{nomeOrgao}
     
-    PUT /api/v1/denuncia/
+	PUT /api/v1/denuncia/
+ 
+ POST /api/v1/denuncia/arquivo
+ 
+ ```json
+ {
+ 	"arquivo":"seu arquivo"
+ }
+ 
+ ```
  
  POST /api/v1/denuncia
 
