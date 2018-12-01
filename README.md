@@ -1,3 +1,5 @@
+As orientações de manuseio e instalação estão definidas no arquivo Orientações de Manuseio e Instalação.docx da pasta /code
+
 #Propina no more com Spring Boot, MySQL, JPA, Hibernate Rest API
 
 Desenvolver uma API Restful para realizar denuncia e consulta utilizando Spring Boot, Mysql, JPA and Hibernate.
