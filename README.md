@@ -1,4 +1,4 @@
-As orientações de manuseio e instalação estão definidas no arquivo Orientações de Manuseio e Instalação.docx da pasta /code
+As orientações de manuseio e instalação estão definidas no arquivo Orientações de Manuseio e Instalação.docx na pasta /code
 
 #Propina no more com Spring Boot, MySQL, JPA, Hibernate Rest API
 
