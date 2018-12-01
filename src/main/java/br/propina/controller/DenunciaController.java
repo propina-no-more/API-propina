@@ -81,8 +81,10 @@ public class DenunciaController {
 
 	private Orgao orgaoPersis(Orgao orgao) {
 		if (orgao != null) {
-			Orgao ob = or.findBynome(orgao.getNome());
+			Orgao ob = or.findBynome(orgao.getNome());	
+			
 			if (ob == null) {
+				System.out.println(orgao.getNome());
 				ob = or.save(orgao);
 			}
 			return ob;
@@ -144,32 +146,4 @@ public class DenunciaController {
 			return "Denuncia não encontrada!";
 		}
 	}
-	// fim do remover
-	/*
-	 * @GetMapping("/notes/{id}") public Note getNoteById(@PathVariable(value =
-	 * "id") Long noteId) { return denunciaRepository.findById(noteId)
-	 * .orElseThrow(() -> new ResourceNotFoundException("Note", "id", noteId)); }
-	 * 
-	 * @PutMapping("/notes/{id}") public Note updateNote(@PathVariable(value = "id")
-	 * Long noteId,
-	 * 
-	 * @Valid @RequestBody Note noteDetails) {
-	 * 
-	 * Note note = denunciaRepository.findById(noteId) .orElseThrow(() -> new
-	 * ResourceNotFoundException("Note", "id", noteId));
-	 * 
-	 * note.setTitle(noteDetails.getTitle());
-	 * note.setContent(noteDetails.getContent());
-	 * 
-	 * Note updatedNote = denunciaRepository.save(note); return updatedNote; }
-	 * 
-	 * @DeleteMapping("/notes/{id}") public ResponseEntity<?>
-	 * deleteNote(@PathVariable(value = "id") Long noteId) { Note note =
-	 * denunciaRepository.findById(noteId) .orElseThrow(() -> new
-	 * ResourceNotFoundException("Note", "id", noteId));
-	 * 
-	 * denunciaRepository.delete(note);
-	 * 
-	 * return ResponseEntity.ok().build(); }
-	 */
 }

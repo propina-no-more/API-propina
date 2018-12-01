@@ -24,13 +24,13 @@ public class Edital implements Serializable{
 	@GeneratedValue(strategy=GenerationType.IDENTITY )
 	private Long codEdital;
 	private String ganhador;
-	@Column(nullable= false)
+	
 	private String objetoLicitado;
-	@Column(nullable= false)
+	
 	private String referencia;
-	@Column(nullable= false)
+	
 	private String status;
-	@OneToOne()
+	@OneToOne
 	@JoinColumn(name="codOrgao")
 	private Orgao orgao_id;
 	

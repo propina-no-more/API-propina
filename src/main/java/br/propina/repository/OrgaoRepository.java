@@ -15,6 +15,7 @@ public interface OrgaoRepository extends JpaRepository<Orgao, String>{
 			+ "GROUP BY o.nome, o.sigla ORDER BY count(d) desc")
 	List<Orgao> findTopDenuncia();
 
+	@Query("SELECT o FROM Orgao o where nome = ?1 ")
 	Orgao findBynome(String nome);
 
 }
