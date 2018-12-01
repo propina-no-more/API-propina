@@ -20,6 +20,7 @@ import java.util.Optional;
 /**
  * Created by rajeevkumarsingh on 27/06/17.
  */
+@CrossOrigin
 @RestController
 @RequestMapping("/api/v1/denuncia/")
 public class DenunciaController {
@@ -102,15 +103,13 @@ public class DenunciaController {
 	}
 
 	@PostMapping("arquivo")
-	private String provaPersis(MultipartFile prova) {
+	private Prova provaPersis(MultipartFile prova) {
+		System.out.println();
 		try {
-
-			Prova filemode = new Prova(prova.getOriginalFilename(), prova.getBytes(), prova.getContentType());
-
-			return "Arquivo carregado com sucesso! -> nome arquivo = " + prova.getOriginalFilename() + "  >> "
-					+ pr.save(filemode).getCodProva();
+			Prova filemode = pr.save(new Prova(prova.getOriginalFilename(), prova.getBytes(), prova.getContentType()));
+			return filemode;
 		} catch (Exception e) {
-			return "FAIL! Maybe You had uploaded the file before or the file's size > 500KB";
+			return null;
 		}
 	}
 

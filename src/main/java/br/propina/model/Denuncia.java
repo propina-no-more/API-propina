@@ -24,9 +24,9 @@ public class Denuncia implements Serializable{
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long codDenuncia;
-	@Column(nullable= false)
+	@Column
 	private int ano;
-	private String cpf;
+	private String email;
 	private String nome;
 	@Column(nullable= false)
 	private String onde;
@@ -60,11 +60,11 @@ public class Denuncia implements Serializable{
 	public Denuncia() {
 	}
 	
-	public Denuncia(Long codDenuncia, int ano, String cpf, String nome, String onde, String oque, String quando,
+	public Denuncia(Long codDenuncia, int ano, String email, String nome, String onde, String oque, String quando,
 			char sigilo, String telefone, Edital edital, Orgao orgao) {
 		this.codDenuncia = codDenuncia;
 		this.ano = ano;
-		this.cpf = cpf;
+		this.email = email;
 		this.nome = nome;
 		this.onde = onde;
 		this.oque = oque;
@@ -95,11 +95,11 @@ public class Denuncia implements Serializable{
 	public void setAno(int ano) {
 		this.ano = ano;
 	}
-	public String getCpf() {
-		return cpf;
+	public String getEmail() {
+		return email;
 	}
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	public String getNome() {
 		return nome;
